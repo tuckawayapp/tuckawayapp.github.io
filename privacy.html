@@ -40,8 +40,8 @@
   <h2>What Tuckaway does not store</h2>
   <ul>
     <li>Anything a program marks as private. Password managers and many other apps tell Windows that a copy should not be recorded, and Tuckaway always honors that, whatever its settings.</li>
-    <li>Copies from programs you add to <b>Ignore programs</b> in Settings, and, if you turn that option on, copies from private browser windows ("Also ignore private windows").</li>
-    <li>Anything copied while <b>Do not disturb</b> is on, or while the app is locked with "Pause capture while locked" turned on in Settings, App Lock.</li>
+    <li>Copies from programs you add to <b>Ignore Programs</b> in Settings → Capture, and, if you turn that option on, copies from private browser windows ("Also ignore private windows").</li>
+    <li>Anything copied while <b>Do not disturb</b> is on, or while the app is locked with "Pause capture while locked" turned on in Settings → Privacy &amp; security → App Lock.</li>
   </ul>
   <p>When Tuckaway detects something that looks like a password, a key or another secret, Secret Guard seals it, and it can delete such clips automatically after a time you choose. A clip Secret Guard catches is never given to the language model: it is not labeled by it, not searched by meaning and has no entry in the meaning index. The same goes for a clip locked with a password, and for a clip whose check for secrets could not finish.</p>
 
@@ -54,12 +54,12 @@
   <table>
     <tr><th>What</th><th>When</th><th>What is sent</th></tr>
     <tr><td>Search by meaning model</td><td>Only if you turn on search by meaning. The model is downloaded once, about 330 MB: the model file and its small vocabulary file (5 MB), both from Tuckaway's own GitHub page (<code>github.com/raviv-steinberg/Tuckaway-Models</code>). Each file is checked against its published size and fingerprint before it is used.</td><td>Ordinary download requests. None of your clips or searches are sent; search by meaning runs entirely on your PC.</td></tr>
-    <tr><td>Tuckaway Pro (Microsoft Store version only)</td><td>When Tuckaway starts, and when you open the upgrade window or About, it asks the Microsoft Store, through Windows, whether Tuckaway Pro is owned and what it costs in your currency. The Store answers from its own records, also offline.</td><td>Tuckaway sends nothing of its own with these questions.</td></tr>
-    <tr><td>Updates</td><td>Microsoft Store version: updates come through the Microsoft Store, under Microsoft's own privacy terms; this version never checks GitHub. Version downloaded from the website: it checks GitHub for a newer version shortly after it starts, every four hours by default and when your PC wakes from sleep. You can turn this off in Settings, Updates, "Check automatically".</td><td>An ordinary request for a small public version file (<code>version.json</code>) from <code>github.com/tuckawayapp/Tuckaway-Releases</code>. It carries no clips, no settings, no identifier and not even the version you run. A new setup is checked against its published fingerprint before it runs.</td></tr>
+    <tr><td>Tuckaway Pro (Microsoft Store version only)</td><td>When Tuckaway starts, and when you open the Tuckaway Pro window or About Tuckaway, it asks the Microsoft Store, through Windows, whether Tuckaway Pro is owned and what it costs in your currency. The Store answers from its own records, also offline.</td><td>Tuckaway sends nothing of its own with these questions.</td></tr>
+    <tr><td>Updates</td><td>Microsoft Store version: updates come through the Microsoft Store, under Microsoft's own privacy terms; this version never checks GitHub. Version downloaded from the website: it checks GitHub for a newer version shortly after it starts, every four hours by default and when your PC wakes from sleep. You can turn this off in Settings → Data &amp; system → Updates → "Check automatically".</td><td>An ordinary request for a small public version file (<code>version.json</code>) from <code>github.com/tuckawayapp/Tuckaway-Releases</code>. It carries no clips, no settings, no identifier and not even the version you run. A new setup is checked against its published fingerprint before it runs.</td></tr>
   </table>
   </div>
   <p>Downloads from GitHub are subject to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. Like any visit to a website, GitHub's servers see your IP address.</p>
-  <p>Contact support in About opens a new email in your own mail program; Tuckaway sends nothing itself.</p>
+  <p>Contact support in About Tuckaway opens a new email in your own mail program; Tuckaway sends nothing itself.</p>
 
   <h2>Tuckaway Pro and purchases</h2>
   <p>The Microsoft Store version offers Tuckaway Pro, a one-time purchase that unlocks extra features, and a free 7-day trial of it.</p>
@@ -74,19 +74,19 @@
   <ul>
     <li>Search, including search by meaning. The language model runs on your PC, and what it makes of your clips (the meaning index) is kept in your encrypted history; nothing is sent anywhere.</li>
     <li>Smart labels, which say what each clip holds (JSON, a link, a color, code, an address, a list). The rules and the language model that make them run only on your PC, the labels are kept in your encrypted history, and nothing is sent anywhere.</li>
-    <li>Reading text from images (Copy text), using the text recognition built into Windows.</li>
+    <li>Reading text from images (Copy Text (OCR) in the clip menu), using the text recognition built into Windows.</li>
     <li>Detecting passwords, links, emails and phone numbers in your clips.</li>
     <li>Windows Hello, when you use it to unlock the app or reveal a secret.</li>
   </ul>
 
   <h2 id="log">The log</h2>
-  <p>Tuckaway keeps a log file on your PC to help with problems. At the normal log level (Info, the level of every new install and of Restore to defaults) it never contains the content of your clips, file names or folder paths, and your Windows user name and profile folder are removed from every line. If you raise the log level to Debug in Settings, Log, for troubleshooting, lines can also include folder and file paths (such as the names of files you copied) and names you give clips; Tuckaway says so when you turn it on, and goes back to Info by itself after 24 hours. The log is never sent anywhere; Save diagnostics only makes a zip file for you to share if you choose.</p>
+  <p>Tuckaway keeps a log file on your PC to help with problems. At the normal log level (Info, the level of every new install and of Restore defaults) it never contains the content of your clips, file names or folder paths, and your Windows user name and profile folder are removed from every line. If you raise the log level to Debug in Settings → Data &amp; system → Log → Level, for troubleshooting, lines can also include folder and file paths (such as the names of files you copied) and names you give clips; Tuckaway says so when you turn it on, and goes back to Info by itself after 24 hours. The log is never sent anywhere; Save diagnostics only makes a zip file for you to share if you choose.</p>
 
   <h2>Your control</h2>
   <ul>
-    <li><b>Delete clips</b> one by one, in bulk, or automatically by age or number (Settings, History). Automatic clearing moves clips to Recovery Trash first, as far as the Trash has room.</li>
-    <li><b>Clear all history</b> from Settings, Storage.</li>
-    <li><b>Erase everything</b> from Settings, General, Restore to defaults, with "Also erase all my data".</li>
+    <li><b>Delete clips</b> one by one, in bulk, or automatically by age or number (Settings → History &amp; search → History). Automatic clearing moves clips to Recovery Trash first, as far as the Trash has room.</li>
+    <li><b>Clear all history</b> from Settings → Data &amp; system → Storage → Clear History.</li>
+    <li><b>Erase everything</b> from Settings → Basics → General → Restore all settings to default → Restore defaults, with "Also erase all my data".</li>
     <li><b>Lock the app</b> with App Lock, so others using your PC can't open your history. Your PIN is stored only as a hash.</li>
     <li><b>Uninstall</b> Tuckaway to remove the app. Uninstalling the Microsoft Store version also removes all of its data, except the small "trial used" marker, if you started the Pro trial: the "Tuckaway/ProTrial" entry in Windows Credential Manager (Windows Credentials, Generic Credentials), which holds only the two trial dates and which you can remove there. Uninstalling the version downloaded from the website keeps your clips and settings in <code>%LOCALAPPDATA%\Tuckaway</code> until you delete that folder, so a reinstall finds them again.</li>
   </ul>
