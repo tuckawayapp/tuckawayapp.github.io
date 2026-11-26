@@ -1,109 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- This page has moved to the new site; browsers and search engines are sent there at once. -->
+<!-- GitHub Pages has no server redirects, so the page sends the reader on with a refresh at once, and names the new address as the canonical one. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tuckaway Privacy Policy</title>
-<meta name="description" content="How Tuckaway handles your data: everything stays on your PC.">
-<!-- The privacy policy of Tuckaway 2.0. It says the same as docs/privacy-policy.md in the app's repository (shipped with the
-     app as PRIVACY-POLICY.txt); change both together, with the same date. -->
+<title>Privacy policy - Tuckaway</title>
+<link rel="canonical" href="https://tuckaway.me/privacy">
+<meta http-equiv="refresh" content="0; url=https://tuckaway.me/privacy">
 <link rel="icon" href="images/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">
+<style>body{font:16px/1.6 system-ui,sans-serif;margin:0;display:grid;place-items:center;min-height:100vh;padding:24px;box-sizing:border-box;text-align:center}a{color:#5b4fe0}</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<nav><div class="wrap"><a class="brand" href="./"><img src="images/icon.svg" alt=""><b>TUCKAWAY</b></a>
-  <div class="links"><a href="./">Home</a><a href="screenshots.html">Screenshots</a><a href="privacy.html" aria-current="page">Privacy</a></div></div></nav>
-
-<main id="main" class="wrap">
-  <h1>Privacy Policy</h1>
-  <div class="date">Last updated: 6 November 2026 · Applies to Tuckaway 2.0 and later, both the Microsoft Store version and the version downloaded from the website</div>
-
-  <div class="summary">
-    <div><b><span class="ok">✓</span>Stays on your PC</b>Your clipboard history is stored only on your computer, encrypted.</div>
-    <div><b><span class="ok">✓</span>No tracking</b>No analytics, no ads, no crash reports, no account.</div>
-    <div><b><span class="ok">✓</span>Nothing is sold or shared</b>We never see your clips, so there is nothing to share.</div>
-  </div>
-
-  <h2>What Tuckaway stores</h2>
-  <p>Tuckaway is a clipboard manager. To do its job, it saves what you copy, so you can find and paste it again later. This can include:</p>
-  <ul>
-    <li>Text, links, images and files you copy.</li>
-    <li>The name of the program you copied from, and the time.</li>
-    <li>Screenshots you take with Tuckaway, and any marks you add to them.</li>
-    <li>Your settings, folders, tags, favorites, snippets, macros and sticky notes.</li>
-    <li>A local log of the app's activity (see <a href="#log">The log</a>).</li>
-  </ul>
-  <p>Your clips are kept in a database file on your PC that is encrypted with a random key made for your PC. That key is protected with Windows data protection for your user account, so the database can only be opened by your Windows account. Stored images and copied files are encrypted too. Snippets, macros and settings are stored without encryption. Nothing is ever uploaded by Tuckaway.</p>
-  <p>To know which program you copied from, and to notice a screen share (Teams, Zoom and similar) so it can hide your clips, Tuckaway reads the names and titles of open windows. This happens only on your PC, and window titles are not written to the log.</p>
-
-  <h2>What Tuckaway does not store</h2>
-  <ul>
-    <li>Anything a program marks as private. Password managers and many other apps tell Windows that a copy should not be recorded, and Tuckaway always honors that, whatever its settings.</li>
-    <li>Copies from programs you add to <b>Ignore Programs</b> in Settings → Capture, and, if you turn that option on, copies from private browser windows ("Also ignore private windows").</li>
-    <li>Anything copied while <b>Do not disturb</b> is on, or while the app is locked with "Pause capture while locked" turned on in Settings → Privacy &amp; security → App Lock.</li>
-  </ul>
-  <p>When Tuckaway detects something that looks like a password, a key or another secret, Secret Guard seals it, and it can delete such clips automatically after a time you choose. A clip Secret Guard catches is never given to the language model: it is not labeled by it, not searched by meaning and has no entry in the meaning index. The same goes for a clip locked with a password, and for a clip whose check for secrets could not finish.</p>
-
-  <h2>Keyboard and mouse</h2>
-  <p>Tuckaway sees key presses only while it needs them: while its window is in front, so you can move through your clips with the keyboard; if you turn on snippets, so an abbreviation you type can be replaced with its text (only then does it also notice mouse clicks); while you paste a session's clips one by one; and while the first-run "Try your shortcut" bar is showing. Key presses are never recorded, saved or sent anywhere.</p>
-
-  <h2>When Tuckaway connects to the internet</h2>
-  <p>Tuckaway works fully offline. It connects only in these cases, and never sends your clips, settings or any identifier:</p>
-  <div class="table">
-  <table>
-    <tr><th>What</th><th>When</th><th>What is sent</th></tr>
-    <tr><td>Search by meaning model</td><td>Only if you turn on search by meaning. The model is downloaded once, about 330 MB: the model file and its small vocabulary file (5 MB), both from Tuckaway's own GitHub page (<code>github.com/tuckawayapp/Tuckaway-Models</code>). Each file is checked against its published size and fingerprint before it is used.</td><td>Ordinary download requests. None of your clips or searches are sent; search by meaning runs entirely on your PC.</td></tr>
-    <tr><td>Tuckaway Pro (Microsoft Store version only)</td><td>When Tuckaway starts, and when you open the Tuckaway Pro window or About Tuckaway, it asks the Microsoft Store, through Windows, whether Tuckaway Pro is owned and what it costs in your currency. The Store answers from its own records, also offline.</td><td>Tuckaway sends nothing of its own with these questions.</td></tr>
-    <tr><td>Updates</td><td>Microsoft Store version: updates come through the Microsoft Store, under Microsoft's own privacy terms; this version never checks GitHub. Version downloaded from the website: it checks GitHub for a newer version shortly after it starts, every four hours by default and when your PC wakes from sleep. You can turn this off in Settings → Data &amp; system → Updates → "Check automatically".</td><td>An ordinary request for a small public version file (<code>version.json</code>) from <code>github.com/tuckawayapp/Tuckaway-Releases</code>. It carries no clips, no settings, no identifier and not even the version you run. A new setup is checked against its published fingerprint before it runs.</td></tr>
-  </table>
-  </div>
-  <p>Downloads from GitHub are subject to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. Like any visit to a website, GitHub's servers see your IP address.</p>
-  <p>Contact support in About Tuckaway opens a new email in your own mail program; Tuckaway sends nothing itself.</p>
-
-  <h2>Tuckaway Pro and purchases</h2>
-  <p>The Microsoft Store version offers Tuckaway Pro, a one-time purchase that unlocks extra features, and a free 7-day trial of it.</p>
-  <ul>
-    <li><b>Purchases are handled by Microsoft.</b> You buy Tuckaway Pro in the Microsoft Store's own purchase window, under Microsoft's terms and privacy statement. Tuckaway never sees your payment details, your name, your email address or your Microsoft account; it only learns from the Store whether Pro is owned.</li>
-    <li><b>The trial.</b> If you start the trial, Tuckaway remembers that you did, so it is offered once: it keeps the date the trial started and the latest date Tuckaway has seen since (so changing the clock does not extend it). These two dates are kept in Tuckaway's settings and in a small entry named "Tuckaway/ProTrial" in Windows Credential Manager on your PC. They contain nothing personal and are never sent anywhere.</li>
-    <li><b>Nothing you made is deleted</b> when the trial ends: what you made with a Pro feature is kept and comes back when Pro is unlocked.</li>
-    <li>The version downloaded from the website includes every feature. It has no purchase and no trial, and keeps no trial marker.</li>
-  </ul>
-
-  <h2>Things that happen only on your PC</h2>
-  <ul>
-    <li>Search, including search by meaning. The language model runs on your PC, and what it makes of your clips (the meaning index) is kept in your encrypted history; nothing is sent anywhere.</li>
-    <li>Smart labels, which say what each clip holds (JSON, a link, a color, code, an address, a list). The rules and the language model that make them run only on your PC, the labels are kept in your encrypted history, and nothing is sent anywhere.</li>
-    <li>Reading text from images (Copy Text (OCR) in the clip menu), using the text recognition built into Windows.</li>
-    <li>Detecting passwords, links, emails and phone numbers in your clips.</li>
-    <li>Windows Hello, when you use it to unlock the app or reveal a secret.</li>
-  </ul>
-
-  <h2 id="log">The log</h2>
-  <p>Tuckaway keeps a log file on your PC to help with problems. At the normal log level (Info, the level of every new install and of Restore defaults) it never contains the content of your clips, file names or folder paths, and your Windows user name and profile folder are removed from every line. If you raise the log level to Debug in Settings → Data &amp; system → Log → Level, for troubleshooting, lines can also include folder and file paths (such as the names of files you copied) and names you give clips; Tuckaway says so when you turn it on, and goes back to Info by itself after 24 hours. The log is never sent anywhere; Save diagnostics only makes a zip file for you to share if you choose.</p>
-
-  <h2>Your control</h2>
-  <ul>
-    <li><b>Delete clips</b> one by one, in bulk, or automatically by age or number (Settings → History &amp; search → History). Automatic clearing moves clips to Recovery Trash first, as far as the Trash has room.</li>
-    <li><b>Clear all history</b> from Settings → Data &amp; system → Storage → Clear History.</li>
-    <li><b>Erase everything</b> from Settings → Basics → General → Restore all settings to default → Restore defaults, with "Also erase all my data".</li>
-    <li><b>Lock the app</b> with App Lock, so others using your PC can't open your history. Your PIN is stored only as a hash.</li>
-    <li><b>Uninstall</b> Tuckaway to remove the app. Uninstalling the Microsoft Store version also removes all of its data, except the small "trial used" marker, if you started the Pro trial: the "Tuckaway/ProTrial" entry in Windows Credential Manager (Windows Credentials, Generic Credentials), which holds only the two trial dates and which you can remove there. Uninstalling the version downloaded from the website keeps your clips and settings in <code>%LOCALAPPDATA%\Tuckaway</code> until you delete that folder, so a reinstall finds them again.</li>
-  </ul>
-
-  <h2>Sharing and exports</h2>
-  <p>Tuckaway does not share your data with anyone. When you export clips, the file is saved only where you choose. A database export is not encrypted, so anyone who opens the file can read your clips; Tuckaway warns you before it writes one. In a clips export (.tuckaway), clips locked with a password stay locked, and Secret Guard clips are left out unless you include them with a password of your choice.</p>
-
-  <h2>Children</h2>
-  <p>Tuckaway is not directed at children and does not collect personal information from anyone, including children.</p>
-
-  <h2>Changes to this policy</h2>
-  <p>If this policy changes, the new version will be posted on this page with a new date. If a change affects what leaves your PC, it will also be mentioned in the release notes.</p>
-
-  <h2>Contact</h2>
-  <p>Questions about privacy: <a href="mailto:tuckaway.support@gmail.com">tuckaway.support@gmail.com</a></p>
-</main>
-
-<footer><div class="wrap">Tuckaway · <a href="privacy.html">Privacy</a> · <a href="screenshots.html">Screenshots</a> · <a href="mailto:tuckaway.support@gmail.com">tuckaway.support@gmail.com</a></div></footer>
+<p>Tuckaway has moved to <a href="https://tuckaway.me/privacy">https://tuckaway.me/privacy</a>.</p>
 </body>
 </html>
